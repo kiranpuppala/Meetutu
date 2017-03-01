@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp"
+    tools:context=".MainActivity">
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@+id/mainbody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <EditText
+        android:layout_width="337dp"
+        android:layout_height="80dp"
+        android:theme="@style/MyEditText"
+        android:enabled="true"
+        android:id="@+id/nametext"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:hint="Name"
+        android:textColor="@android:color/holo_red_dark"
+        android:textColorHighlight="@android:color/white"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        style="@style/Base.Widget.AppCompat.EditText"
+        android:layout_x="20dp"
+        android:layout_y="92dp"
+        android:clickable="true" />
+    <EditText
+        android:layout_width="337dp"
+        android:layout_height="80dp"
+        android:height="100dp"
+        android:enabled="true"
+        android:id="@+id/emailtext"
+        android:theme="@style/MyEditText"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:hint="Email"
+        android:textColor="@android:color/holo_red_dark"
+        android:textColorHighlight="@android:color/white"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        style="@style/Base.Widget.AppCompat.EditText"
+        android:layout_below="@+id/nametext"
+        android:layout_x="20dp"
+        android:layout_y="92dp"
+        android:clickable="true" />
+
+    <EditText
+        android:layout_width="337dp"
+        android:layout_height="80dp"
+        android:height="100dp"
+        android:enabled="true"
+        android:id="@+id/mobiletext"
+        android:theme="@style/MyEditText"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:hint="Mobile"
+        android:textColor="@android:color/holo_red_dark"
+        android:textColorHighlight="@android:color/white"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        style="@style/Base.Widget.AppCompat.EditText"
+        android:layout_below="@+id/emailtext"
+        android:layout_x="20dp"
+        android:layout_y="92dp"
+        android:clickable="true"
+        android:layout_marginBottom="5dp"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tutheading"
+        android:text="@string/tutheading"
+        android:layout_below="@+id/mobiletext"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tutheading"
+        android:layout_marginBottom="15dp"
+        />
+
+    <View style="@style/Divider"
+
+        android:layout_below="@+id/emailtext"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tuttype"
+        android:text="What do you want"
+        android:layout_below="@+id/spinner"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        android:layout_marginBottom="5dp"
+    />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/tuttype"
+        android:id="@+id/total_radio"
+        android:layout_marginBottom="10dp"
+        >
+        <RadioButton android:id="@+id/tutor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tutor"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/learner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/learner"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:id="@+id/signup"
+        android:layout_below="@+id/total_radio"
+        android:onClick="onClick"
+
+        android:background="#E91E63"
+        android:textColor="#ffffff"
+        android:layout_centerInParent="true"
+        />
+
+    </LinearLayout>
+</ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Meetutu</string>
+    <string name="tutor">I want to teach</string>
+    <string name="learner">I want to learn</string>
+<string name="tutheading">Select tutorial</string>
+
+    <string-array name="tutorial_array">
+
+        <item>Android</item>
+        <item>PHP</item>
+        <item>C</item>
+        <item>JAVA</item>
+        <item>UI design</item>
+        <item>Oracle</item>
+        <item>IOS development</item>
+
+    </string-array>
+
+
+    <string name="title_activity_maps">Meetutu</string>
+    <string name="Signup">Signup</string>
+</resources>
